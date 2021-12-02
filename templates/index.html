@@ -49,19 +49,18 @@
   <div id="container" style="background-color: violet;">
     <img src="templates/res/sungmo_origin.png" id="image">
   </div>
-  <button id="create_button">짤 생성하기</button>
+
+  <form action="button_clicked", method='get'>
+    <input type='submit'>짤 생성하기</button>
+  </form>
 
   <script type="text/javascript">
     const first_dialogue = document.getElementById('first_dialogue');
     const second_dialogue = document.getElementById('second_dialogue');
-    const create_button = document.getElementById('create_button');
 
     function update_image() {
       first_text = first_dialogue.value;
       second_text = second_dialogue.value;
-    };
-
-    function generate_image() {
     };
 
     first_dialogue.addEventListener('keyup', (e) => {
@@ -70,10 +69,6 @@
 
     second_dialogue.addEventListener('keyup', (e) => {
       update_image();
-    });
-
-    create_button.addEventListener('click', (e) => {
-      generate_image();
     });
   </script>
 </body>

@@ -33,6 +33,8 @@ def create_image(m1, m2):
 
     draw.text(tuple_elementwise_calc(sp_middle_coord[0], m_middle_coord[0], lambda a, b: a - b), m1, font=font, fill='#000000')
     draw.text(tuple_elementwise_calc(sp_middle_coord[1], m_middle_coord[1], lambda a, b: a - b), m2, font=font, fill='#000000')
-    image.show()
+    
+    return image
 
-create_image('지명이가...', '말대꾸?!')
+if __name__ == '__main__':
+    create_image('지명이가...', '말대꾸?!')
