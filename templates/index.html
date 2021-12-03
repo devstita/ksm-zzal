@@ -23,7 +23,7 @@
       height: 60%;
     }
 
-    #container>img {
+    #container > img {
       width: 100%;
       height: 100%;
     }
@@ -36,23 +36,29 @@
   <h1 class="title">김성모 짤 생성기</h1>
   <p class="title">현재까지 생성된 총 말대꾸 개수: ####</p>
 
-  <div>
-    <p>첫 번째 대사</p>
-    <input id="first_dialogue" type="text" name="first_dialogue" maxlength="10">
+  <div style="display: inline-block;">
+    <div>
+    </div>
+
+    <div>
+    </div>
+
+    <form action="/generate", method='post'>
+      <p>첫 번째 대사</p>
+      <input id="first_dialogue" type="text" name="m1" maxlength="15">
+
+      <p>두 번째 대사</p>
+      <input id="second_dialogue" type="text" name="m2" maxlength="15">
+
+      <input type='submit'>짤 생성하기</button>
+    </form>
   </div>
 
-  <div>
-    <p>두 번째 대사</p>
-    <input id="second_dialogue" type="text" name="second_dialogue" maxlength="10">
-  </div>
-
-  <div id="container" style="background-color: violet;">
+  <div id="container" style="background-color: violet; display: inline-block;">
     <img src="templates/res/sungmo_origin.png" id="image">
+    <p id='first_text'></p>
+    <p id='second_text'></p>
   </div>
-
-  <form action="button_clicked", method='get'>
-    <input type='submit'>짤 생성하기</button>
-  </form>
 
   <script type="text/javascript">
     const first_dialogue = document.getElementById('first_dialogue');
