@@ -2,7 +2,6 @@ from flask import Flask, render_template, send_file, request
 import process
 from io import BytesIO
 from base64 import b64encode
-import os
 
 app = Flask(__name__)
 
