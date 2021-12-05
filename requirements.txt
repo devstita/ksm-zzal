@@ -72,7 +72,7 @@ Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
 fonttools==4.25.0
 fsspec @ file:///tmp/build/80754af9/fsspec_1636116461911/work
 future @ file:///C:/ci/future_1607568713721/work
-gevent @ file:///C:/ci/gevent_1628273776273/work
+gevent @ file:///Cgci/gevent_1628273776273/work
 glob2 @ file:///home/linux1/recipes/ci/glob2_1610991677669/work
 greenlet @ file:///C:/ci/greenlet_1628888275363/work
 gunicorn==20.1.0
