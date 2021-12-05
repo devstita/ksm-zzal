@@ -41,4 +41,4 @@ def create_image(m1, m2):
     return image
 
 if __name__ == '__main__':
-    create_image('사랑헤이요...', '연애가중계...').show()
+    create_image('사랑헤이요...', '연애가중계...').show() # About 50ms

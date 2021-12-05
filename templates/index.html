@@ -7,7 +7,7 @@
     @font-face {
       font-family: 'NanumGothic';
       src: url('res/NanumGothic.eot');
-      src: url('res/NanumGothic.eot') format('embedded-opentype'), url('res/NanumGothic.woff') format('woff'), url('res/NanumGothic.ttf') format('truetype'), url('res/NanumGothic.svg') format('woff');
+      src: url('res/NanumGothic.eot') format('embedded-opentype'), url('res/NanumGothic.woff') format('woff'), url('res/NanumGothic.ttf') format('truetype')
     }
 
     body {
@@ -28,7 +28,7 @@
       height: 100%;
     }
 
-    #container>p {}
+    #container > p {}
   </style>
 </head>
 
@@ -36,13 +36,7 @@
   <h1 class="title">김성모 짤 생성기</h1>
   <p class="title">현재까지 생성된 총 말대꾸 개수: ####</p>
 
-  <div style="display: inline-block;">
-    <div>
-    </div>
-
-    <div>
-    </div>
-
+  <div>
     <form action="/generate", method='post'>
       <p>첫 번째 대사</p>
       <input id="first_dialogue" type="text" name="m1" maxlength="15">
@@ -50,33 +44,13 @@
       <p>두 번째 대사</p>
       <input id="second_dialogue" type="text" name="m2" maxlength="15">
 
-      <input type='submit'>짤 생성하기</button>
+      <input type='submit' value='짤 생성하기' />
     </form>
   </div>
 
-  <div id="container" style="background-color: violet; display: inline-block;">
-    <img src="templates/res/sungmo_origin.png" id="image">
-    <p id='first_text'></p>
-    <p id='second_text'></p>
+  <div id="container">
+    <img src="{{ src }}">
   </div>
-
-  <script type="text/javascript">
-    const first_dialogue = document.getElementById('first_dialogue');
-    const second_dialogue = document.getElementById('second_dialogue');
-
-    function update_image() {
-      first_text = first_dialogue.value;
-      second_text = second_dialogue.value;
-    };
-
-    first_dialogue.addEventListener('keyup', (e) => {
-      update_image();
-    });
-
-    second_dialogue.addEventListener('keyup', (e) => {
-      update_image();
-    });
-  </script>
 </body>
 
 </html>
