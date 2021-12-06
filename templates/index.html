@@ -3,38 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>김성모 짤 생성기</title>
-  <style type="text/css">
-    @font-face {
-      font-family: 'NanumGothic';
-      src: url('res/NanumGothic.eot');
-      src: url('res/NanumGothic.eot') format('embedded-opentype'), url('res/NanumGothic.woff') format('woff'), url('res/NanumGothic.ttf') format('truetype')
-    }
-
-    body {
-      font-family: 'NanumGothic', sans-serif;
-    }
-
-    .title {
-      text-align: center;
-    }
-
-    #container {
-      width: 30%;
-      height: 60%;
-    }
-
-    #container > img {
-      width: 100%;
-      height: 100%;
-    }
-
-    #container > p {}
-  </style>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
   <h1 class="title">김성모 짤 생성기</h1>
-  <p class="title">현재까지 생성된 총 말대꾸 개수: ####</p>
+  <p class="title">현재까지 생성된 총 말대꾸 개수: {{ count }}</p>
 
   <div>
     <form action="/generate", method='post'>
@@ -49,8 +23,24 @@
   </div>
 
   <div id="container">
-    <img src="{{ src }}">
+    <!-- <img src="{{ src }}"> -->
+    <img src="res/sungmo_origin.png">
+    <div id='firstDialogueShow'>이지명이...</div>
+    <div id='secondDialogueShow'>말대꾸?!</div>
   </div>
+
+  <script type="text/javascript">
+    const first_dialogue = document.getElementById('first_dialogue');
+    const second_dialogue = document.getElementById('second_dialogue');
+
+    /* first_dialogue.addEventListener('keyup', function(e) {
+      document.getElementById('firstDialogueShow').innerHTML = first_dialogue.value;
+    });
+
+    second_dialogue.addEventListener('keyup', function(e) {
+      document.getElementById('secondDialogueShow').innerHTML = second_dialogue.value;
+    }); */
+  </script>
 </body>
 
 </html>

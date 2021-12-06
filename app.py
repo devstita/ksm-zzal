@@ -8,7 +8,7 @@ app = Flask(__name__, static_url_path='', static_folder='templates', template_fo
 
 @app.route('/')
 def index():
-    return render_template('index.html', src='res\\sungmo_origin.png')
+    return render_template('index.html', src='res\\sungmo_origin.png', count='0')
 
 # TODO: Realtime image update
 @app.route('/generate', methods=['POST'])

@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('res/NanumGothic.ttf');
+}
+
+body {
+  font-family: 'NanumGothic', sans-serif;
+}
+
+.title {
+  text-align: center;
+}
+
+#container {
+  position: relative;
+  width: 50%;
+  height: 60%;
+}
+
+#container > img {
+  width: 100%;
+  height: 100%;
+}
+
+#firstDialogueShow {
+  position: absolute;
+  text-align: center;
+  top: 12%;
+  width: 100%;
+  font-size: 20pt;
+  font-weight: 550;
+}
+
+#secondDialogueShow {
+  position: absolute;
+  text-align: center;
+  top: 78%;
+  width: 100%;
+  font-size: 20pt;
+  font-weight: 550;
+}
