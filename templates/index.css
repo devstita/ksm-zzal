@@ -22,20 +22,20 @@ body {
   height: 100%;
 }
 
-#firstDialogueShow {
+.dialogue {
   position: absolute;
   text-align: center;
-  top: 12%;
   width: 100%;
-  font-size: 20pt;
+  font-size: 24px;
   font-weight: 550;
+  transform: translate(0, -50%);
+  left: 0%;
+}
+
+#firstDialogueShow {
+  top: 17%;
 }
 
 #secondDialogueShow {
-  position: absolute;
-  text-align: center;
-  top: 78%;
-  width: 100%;
-  font-size: 20pt;
-  font-weight: 550;
+  top: 82%;
 }

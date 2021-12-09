@@ -24,22 +24,44 @@
 
   <div id="container">
     <!-- <img src="{{ src }}"> -->
-    <img src="res/sungmo_origin.png">
-    <div id='firstDialogueShow'>이지명이...</div>
-    <div id='secondDialogueShow'>말대꾸?!</div>
+    <img id='image' src="res/sungmo_origin.png">
+    <div class='dialogue' id='firstDialogueShow'></div>
+    <div class='dialogue' id='secondDialogueShow'></div>
   </div>
 
+  <!-- Script for reactivity -->
   <script type="text/javascript">
     const first_dialogue = document.getElementById('first_dialogue');
     const second_dialogue = document.getElementById('second_dialogue');
 
-    /* first_dialogue.addEventListener('keyup', function(e) {
+    first_dialogue.addEventListener('keyup', function(e) {
       document.getElementById('firstDialogueShow').innerHTML = first_dialogue.value;
     });
 
     second_dialogue.addEventListener('keyup', function(e) {
       document.getElementById('secondDialogueShow').innerHTML = second_dialogue.value;
-    }); */
+    });
+  </script>
+
+  <!-- Script for responsibility -->
+  <script type="text/javascript">
+    const cb = (e) => {
+      image = document.getElementById('image');
+      // console.log(image.width, image.height);
+      
+      const first_dialogue = document.getElementById('firstDialogueShow');
+      const second_dialogue = document.getElementById('secondDialogueShow');
+      
+      // log the font-size of first_dialogue via style
+      const width = parseInt(window.getComputedStyle(first_dialogue, null).width)
+      const new_font_size = (width / 640 * 50) + 'pt';
+      
+      first_dialogue.style.fontSize = new_font_size;
+      second_dialogue.style.fontSize = new_font_size;
+    }
+
+    window.addEventListener('resize', cb);
+    cb();
   </script>
 </body>
 
